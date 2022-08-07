@@ -12,15 +12,9 @@ export class MintRequestDto {
 
   @ApiProperty({
     required: true,
-    description: 'Amount of tokens to be minted',
+    description: 'TokenId',
     example: 42,
-    minimum: 0.000000000000000001,
+    minimum: 0,
   })
-  amount: number;
-
-  @ApiProperty({
-    required: true,
-    description: 'Signature payload',
-  })
-  signature: string;
+  tokenId: number;
 }
