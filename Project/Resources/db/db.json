@@ -49,9 +49,71 @@
                 }
             },
             "size": 11893
+        },
+        "metadata": {
+            "name": "First Mint OG LaserCat",
+            "description": "LaserCat NFT",
+            "image": "ipfs.io/ipfs/QmXJLZanS7sd8WPij1F6hfDbVWgUw2w9dByVBdTFrzFP8z"
         }
     },
     "1": {
+        "file": {
+            "fileName": "another-laser.jpg",
+            "mimetype": "image/jpeg",
+            "storageName": "56bfb3104928e4be0ebac2f4009b348b",
+            "size": 11882
+        },
+        "ipfs": {
+            "path": "QmXJLZanS7sd8WPij1F6hfDbVWgUw2w9dByVBdTFrzFP8z",
+            "cid": {
+                "code": 112,
+                "version": 0,
+                "hash": {
+                    "0": 18,
+                    "1": 32,
+                    "2": 133,
+                    "3": 33,
+                    "4": 128,
+                    "5": 124,
+                    "6": 3,
+                    "7": 197,
+                    "8": 61,
+                    "9": 111,
+                    "10": 201,
+                    "11": 28,
+                    "12": 163,
+                    "13": 33,
+                    "14": 214,
+                    "15": 45,
+                    "16": 203,
+                    "17": 92,
+                    "18": 84,
+                    "19": 223,
+                    "20": 64,
+                    "21": 140,
+                    "22": 168,
+                    "23": 101,
+                    "24": 81,
+                    "25": 78,
+                    "26": 11,
+                    "27": 169,
+                    "28": 145,
+                    "29": 49,
+                    "30": 172,
+                    "31": 163,
+                    "32": 61,
+                    "33": 199
+                }
+            },
+            "size": 11893
+        },
+        "metadata": {
+            "name": "Twin Laser Cat",
+            "description": "LaserCats NFT",
+            "image": "ipfs.io/ipfs/QmXJLZanS7sd8WPij1F6hfDbVWgUw2w9dByVBdTFrzFP8z"
+        }
+    },
+    "2": {
         "file": {
             "fileName": "galaxy-cat.jpg",
             "mimetype": "image/jpeg",
@@ -101,9 +163,71 @@
                 }
             },
             "size": 250657
+        },
+        "metadata": {
+            "name": "Galaxy Burger Cat",
+            "description": "LaserCats NFT",
+            "image": "ipfs.io/ipfs/QmbfeYNi2b5zdJF3B8zCN251RfD5rvDNm21gx9m1hxSJxs"
         }
     },
-    "2": {
+    "3": {
+        "file": {
+            "fileName": "kittens.webp",
+            "mimetype": "image/webp",
+            "storageName": "c6c091b6b7420351f9499553d1b86520",
+            "size": 56730
+        },
+        "ipfs": {
+            "path": "QmeiBoL8Cw4pFoS3sFghFp3J1tZWyHmf7wv46dX4cNL1gQ",
+            "cid": {
+                "code": 112,
+                "version": 0,
+                "hash": {
+                    "0": 18,
+                    "1": 32,
+                    "2": 243,
+                    "3": 63,
+                    "4": 87,
+                    "5": 106,
+                    "6": 37,
+                    "7": 53,
+                    "8": 168,
+                    "9": 108,
+                    "10": 61,
+                    "11": 88,
+                    "12": 157,
+                    "13": 38,
+                    "14": 190,
+                    "15": 37,
+                    "16": 159,
+                    "17": 174,
+                    "18": 178,
+                    "19": 208,
+                    "20": 214,
+                    "21": 254,
+                    "22": 148,
+                    "23": 144,
+                    "24": 1,
+                    "25": 45,
+                    "26": 50,
+                    "27": 4,
+                    "28": 34,
+                    "29": 146,
+                    "30": 87,
+                    "31": 251,
+                    "32": 104,
+                    "33": 213
+                }
+            },
+            "size": 56744
+        },
+        "metadata": {
+            "name": "Kittens",
+            "description": "LaserCats NFT",
+            "image": "ipfs.io/ipfs/QmeiBoL8Cw4pFoS3sFghFp3J1tZWyHmf7wv46dX4cNL1gQ"
+        }
+    },
+    "4": {
         "file": {
             "fileName": "kittens1.jpg",
             "mimetype": "image/jpeg",
@@ -155,7 +279,7 @@
             "size": 102761
         }
     },
-    "3": {
+    "5": {
         "file": {
             "fileName": "laser-cats-pizza.jpg",
             "mimetype": "image/jpeg",
@@ -207,7 +331,7 @@
             "size": 128492
         }
     },
-    "4": {
+    "6": {
         "file": {
             "fileName": "moon.jpg",
             "mimetype": "image/jpeg",
@@ -259,7 +383,7 @@
             "size": 40841
         }
     },
-    "5": {
+    "7": {
         "file": {
             "fileName": "persian-cat.jpg",
             "mimetype": "image/jpeg",
@@ -311,7 +435,7 @@
             "size": 73071
         }
     },
-    "6": {
+    "8": {
         "file": {
             "fileName": "pizza.jpg",
             "mimetype": "image/jpeg",
@@ -363,7 +487,7 @@
             "size": 250514
         }
     },
-    "7": {
+    "9": {
         "file": {
             "fileName": "rainbow-belt.jpg",
             "mimetype": "image/jpeg",
@@ -413,110 +537,6 @@
                 }
             },
             "size": 219849
-        }
-    },
-    "8": {
-        "file": {
-            "fileName": "stairs-cats.jpg",
-            "mimetype": "image/jpeg",
-            "storageName": "35c10e92dcc8c33b6c25a941d52b975d",
-            "size": 112757
-        },
-        "ipfs": {
-            "path": "QmXsy7uegeYS9YcmXrfA4RRmd9h9yLqBVKrHUSKDtphFtF",
-            "cid": {
-                "code": 112,
-                "version": 0,
-                "hash": {
-                    "0": 18,
-                    "1": 32,
-                    "2": 141,
-                    "3": 191,
-                    "4": 1,
-                    "5": 12,
-                    "6": 168,
-                    "7": 49,
-                    "8": 226,
-                    "9": 145,
-                    "10": 122,
-                    "11": 21,
-                    "12": 241,
-                    "13": 239,
-                    "14": 116,
-                    "15": 239,
-                    "16": 90,
-                    "17": 35,
-                    "18": 94,
-                    "19": 20,
-                    "20": 142,
-                    "21": 4,
-                    "22": 132,
-                    "23": 44,
-                    "24": 239,
-                    "25": 196,
-                    "26": 2,
-                    "27": 94,
-                    "28": 180,
-                    "29": 86,
-                    "30": 255,
-                    "31": 38,
-                    "32": 181,
-                    "33": 164
-                }
-            },
-            "size": 112771
-        }
-    },
-    "9": {
-        "file": {
-            "fileName": "ufocats.jpg",
-            "mimetype": "image/jpeg",
-            "storageName": "07544ae2629e528aeddc92e607b71b2b",
-            "size": 83102
-        },
-        "ipfs": {
-            "path": "QmRF3274CpqdcbeiwA6offEbecCjXL75uTsBSvXLkfugqU",
-            "cid": {
-                "code": 112,
-                "version": 0,
-                "hash": {
-                    "0": 18,
-                    "1": 32,
-                    "2": 43,
-                    "3": 34,
-                    "4": 205,
-                    "5": 98,
-                    "6": 126,
-                    "7": 254,
-                    "8": 193,
-                    "9": 197,
-                    "10": 234,
-                    "11": 108,
-                    "12": 10,
-                    "13": 95,
-                    "14": 17,
-                    "15": 15,
-                    "16": 225,
-                    "17": 186,
-                    "18": 211,
-                    "19": 213,
-                    "20": 193,
-                    "21": 117,
-                    "22": 195,
-                    "23": 213,
-                    "24": 210,
-                    "25": 1,
-                    "26": 221,
-                    "27": 45,
-                    "28": 193,
-                    "29": 180,
-                    "30": 200,
-                    "31": 137,
-                    "32": 246,
-                    "33": 151
-                }
-            },
-            "size": 83116
         }
     }
 }
