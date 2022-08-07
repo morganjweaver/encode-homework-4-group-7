@@ -30,9 +30,11 @@ const Contract = {
 }
 
 const File = {
-  list: () => axios.get(`/`)
+  list: () => axios.get(`/file/list`),
+  details: (fileId) => axios.get(`/file/${fileId}`),
 }
 
 export default {
-  Contract
+  Contract,
+  File
 }

@@ -11,7 +11,7 @@ const NotFound = () => {
         </Header>
         <Segment.Inline>
             <Button as={Link} to='/' primary>
-                Return to Activities page
+                Return to home page
             </Button>
         </Segment.Inline>
     </Segment>
