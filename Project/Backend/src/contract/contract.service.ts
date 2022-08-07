@@ -2,18 +2,25 @@ import { Injectable } from '@nestjs/common';
 import { ProviderService } from 'src/shared/services/provider/provider.service';
 import { SignerService } from 'src/shared/services/signer/signer.service';
 import { ethers } from 'ethers';
-import * as TokenContract from 'src/assets/contracts/Token.json';
+import * as TokenContract from 'src/assets/contracts/LaserCatsToken.json';
+import { JsonDB } from 'node-json-db';
+import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
+import { FileData } from 'src/schemas/file-data.interface';
+const DB_PATH = '../Resources/db/db.json';
 
 @Injectable()
 export class ContractService {
   contractPublicInstance: ethers.Contract;
   contractSignedInstance: ethers.Contract;
 
+  db: JsonDB;
+
   constructor(
     private providerService: ProviderService,
     private signerService: SignerService,
   ) {
     this.setupContractInstances();
+    this.db = new JsonDB(new Config(DB_PATH, true, true, '/'));
   }
 
   setupContractInstances() {
@@ -37,18 +44,23 @@ export class ContractService {
     return balance;
   }
 
-  async mintTokens(address: string, amount: number) {
-    const tx = await this.contractSignedInstance.mint(
+  async mintNFTToken(address: string, tokenId: number) {
+    let fileData: FileData = this.db.getData(`/${tokenId}`);
+    const tx = await this.contractSignedInstance.safeMint(
       address,
-      ethers.utils.parseEther(amount.toFixed(18)),
+      fileData.metadata,
+      tokenId,
     );
     return tx;
   }
 
   checkSignature(address: string, amount: number, signature: string) {
-    const signatureObject = {address: address, amount: amount};
+    const signatureObject = { address: address, amount: amount };
     const signatureMessage = JSON.stringify(signatureObject);
-    const signerAddress = ethers.utils.verifyMessage(signatureMessage, signature);
+    const signerAddress = ethers.utils.verifyMessage(
+      signatureMessage,
+      signature,
+    );
     return signerAddress == address;
   }
 }
