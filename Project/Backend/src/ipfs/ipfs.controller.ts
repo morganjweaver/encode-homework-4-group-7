@@ -25,11 +25,11 @@ import { SetMetadataDto } from '../dtos/set-metadata.dto';
 import { UploadIpfsDto } from '../dtos/upload-ipfs.dto';
 
 @ApiTags('file')
-@Controller()
+@Controller('file')
 export class IpfsController {
   constructor(private readonly ipfsService: IpfsService) {}
 
-  @Get('')
+  @Get('list')
   @ApiOperation({
     summary: 'Database contents',
     description: 'Gets the Database contents of this server',
@@ -52,7 +52,7 @@ export class IpfsController {
     }
   }
 
-  @Get('ipfs')
+  @Get('ipfs-status')
   @ApiOperation({
     summary: 'IPFS node connection',
     description: 'Returns true if the IPFS Node configured is running',
@@ -72,7 +72,7 @@ export class IpfsController {
 
   @Get(':id')
   @ApiOperation({
-    summary: 'Get element by id',
+    summary: 'Get element by id from the server',
     description: 'Gets the element at the requested index',
   })
   @ApiResponse({
@@ -93,7 +93,7 @@ export class IpfsController {
     }
   }
 
-  @Get('file/:id')
+  @Get('server-get/:id')
   @ApiOperation({
     summary: 'Get file of element by id from server storage',
     description: 'Gets the file of element at the requested index',
@@ -153,7 +153,7 @@ export class IpfsController {
     }
   }
 
-  @Post('file')
+  @Post('upload')
   @ApiOperation({
     summary: 'Register file',
     description: 'Registers a file in the database',

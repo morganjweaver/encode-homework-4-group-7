@@ -30,7 +30,7 @@ const Contract = {
 }
 
 const File = {
-  
+  list: () => axios.get(`/`)
 }
 
 export default {
