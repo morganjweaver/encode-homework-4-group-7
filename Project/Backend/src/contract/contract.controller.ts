@@ -71,24 +71,10 @@ export class ContractController {
     type: HttpException,
   })
   async mintToken(@Body() mintRequestDto: MintRequestDto) {
-    const signature = mintRequestDto.signature;
-    if (!signature || signature.length == 0)
-      throw new HttpException('Missing signature', 401);
-    let signatureValid = false;
     try {
-      signatureValid = this.contractService.checkSignature(
+      const result = await this.contractService.mintNFTToken(
         mintRequestDto.address,
-        mintRequestDto.amount,
-        signature,
-      );
-    } catch (error) {
-      throw new HttpException("Invalid signature: " + error.message, 500);
-    }
-    if (!signatureValid) throw new HttpException('Signature does not match with the requested address', 403);
-    try {
-      const result = await this.contractService.mintTokens(
-        mintRequestDto.address,
-        mintRequestDto.amount,
+        mintRequestDto.tokenId,
       );
       return result;
     } catch (error) {
