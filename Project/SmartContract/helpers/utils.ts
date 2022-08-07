@@ -26,22 +26,19 @@ async function checkBalance(signer: ethers.Wallet): Promise<boolean> {
   return true;
 }
 
-function getSigner(providerName: string = "goerli"): ethers.Wallet {
+function getSigner(): ethers.Wallet {
   const wallet =
-    process.env.MNEMONIC && process.env.MNEMONIC.length > 0
-      ? ethers.Wallet.fromMnemonic(process.env.MNEMONIC)
+    process.env.ADMIN_WALLET_SEED && process.env.ADMIN_WALLET_SEED.length > 0
+      ? ethers.Wallet.fromMnemonic(process.env.ADMIN_WALLET_SEED)
       : new ethers.Wallet(process.env.PRIVATE_KEY ?? EXPOSED_KEY);
-  
-      console.log(`Using address ${wallet.address}`);
 
-  const provider = ethers.providers.getDefaultProvider(providerName);
-  
+  console.log(`Using address ${wallet.address}`);
+
+  const provider = ethers.providers.getDefaultProvider(
+    process.env.PROVIDER_NETWORK
+  );
+
   return wallet.connect(provider);
-} 
-
-export {
-  checkBalance,
-  getSigner,
-  convertStringArrayToBytes32,
-  EXPOSED_KEY
 }
+
+export { checkBalance, getSigner, convertStringArrayToBytes32, EXPOSED_KEY };
