@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import agent from "../../agent"
+import NftListItem from "../NftListItem"
+import axios from 'axios';
 
 function Home() {
+
+  const [items, setItems] = useState([]);
+  
+  useEffect(() => {
+    const getData = async () => {
+      const data = await agent.File.list();
+
+      setItems(data);
+    };
+    getData();
+  }, []);
+  
   return (
-    <h1>Home</h1>
+    <div>
+      <h1>Superb Laser Cats NFT Collection</h1>
+      {items && (
+        items.map((item) => (
+          <NftListItem key={item.fileId} item={item} />
+        ))
+      )}
+    </div>
   )
 }
 

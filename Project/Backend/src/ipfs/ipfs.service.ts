@@ -51,7 +51,15 @@ export class IpfsService {
   }
 
   getAll() {
-    return this.db.getData('/');
+    const items = this.db.getData('/');
+    const itemsArr = [];
+
+    for (var item in items) {
+      items[item]["fileId"] = item;
+      itemsArr.push(items[item]);
+    }
+
+    return itemsArr;
   }
 
   get(fileId: number) {

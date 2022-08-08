@@ -1,23 +1,23 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = process.env.API_URL;
+axios.defaults.baseURL = "http://localhost:3001";
 
 axios.interceptors.response.use(undefined, error => {
     
   // catch some server errors
   if (error.message === 'Network Error' && !error.response) {
-      toast.error('Network error - make sure API works');
+    toast.error('Network error - make sure API works');
   }
 
   const { status } = error.response;
 
   if (status === 404) {
-      history.push('/notfound');
+    toast.error('Client error - not found!');
   }
 
   if (status === 500) {
-      toast.error('Server error - check the terminal for more info!');
+    toast.error('Server error - check the terminal for more info!');
   }
 
   throw error.response;
@@ -30,8 +30,8 @@ const Contract = {
 }
 
 const File = {
-  list: () => axios.get(`/file/list`),
-  details: (fileId) => axios.get(`/file/${fileId}`),
+  list: () => axios.get(`/file/list`).then(responseBody),
+  details: (fileId) => axios.get(`/file/${fileId}`).then(responseBody),
 }
 
 export default {

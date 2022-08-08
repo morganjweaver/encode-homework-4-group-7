@@ -6,7 +6,7 @@ function Header() {
   return (    
     <Menu fixed="top" inverted >
       <Container className="text-center">
-        <Menu.Item header as={NavLink} exact to="/">
+        <Menu.Item header as={NavLink} exact="true" to="/">
           <img
             src="/images/lazer-logo-2.png"
             alt="logo"
