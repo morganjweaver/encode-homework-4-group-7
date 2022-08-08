@@ -8,22 +8,16 @@ function Home() {
   useEffect(() => {
     const getData = async () => {
       const data = await agent.File.list();
-
       setItems(data);
     };
     getData();
   }, []);
 
   return (
-    <>
-      <h1 class="text-3xl font-bold underline mb-8 ml-16">
-        Superb Laser Cats NFT Collection
-      </h1>
-      <div class="grid grid-flow-row grid-cols-2 grid-rows-5 justify-center items-center">
-        {items &&
-          items.map((item) => <NftListItem key={item.fileId} item={item} />)}
-      </div>
-    </>
+    <div class="bg-black px-2 grid grid-flow-row grid-cols-5 grid-rows-2 justify-center items-center pt-5 text-white">
+      {items &&
+        items.map((item) => <NftListItem key={item.fileId} item={item} />)}
+    </div>
   );
 }
 
