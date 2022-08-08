@@ -1,20 +1,14 @@
 import React from "react";
-import { Menu, Container } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
 
 function Header() {
-  return (    
-    <Menu fixed="top" inverted >
-      <Container className="text-center">
-        <Menu.Item header as={NavLink} exact="true" to="/">
-          <img
-            src="/images/lazer-logo-2.png"
-            alt="logo"
-            style={{ marginRight: "10px", height: "52px" }} 
-          />
-        </Menu.Item>
-      </Container>
-    </Menu>
+  return (
+    <header className="sticky top-0 z-50 mt-2 ml-2">
+      <img
+        src="/images/lazer-logo-2.png"
+        alt="logo"
+        style={{ marginRight: "10px", height: "52px" }}
+      />
+    </header>
   );
 }
 

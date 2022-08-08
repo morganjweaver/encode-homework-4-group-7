@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import agent from "../../agent";
 import NftListItem from "../NftListItem";
-import axios from "axios";
 
 function Home() {
   const [items, setItems] = useState([]);
@@ -16,13 +15,15 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
+    <>
+      <h1 class="text-3xl font-bold underline mb-8 ml-16">
         Superb Laser Cats NFT Collection
       </h1>
-      {items &&
-        items.map((item) => <NftListItem key={item.fileId} item={item} />)}
-    </div>
+      <div class="grid grid-flow-row grid-cols-2 grid-rows-5 justify-center items-center">
+        {items &&
+          items.map((item) => <NftListItem key={item.fileId} item={item} />)}
+      </div>
+    </>
   );
 }
 
